@@ -1,9 +1,10 @@
 import React from 'react'
 import CreateIncident from '../pages/create-incident'
-const Dumpster =(props) => {
+const Dumpster = (props) => {
     return (
+    
         <div>
-            it's friday {props}
+             Watch out!  {props.incident.human} caused {props.incident.program} to {props.incident.event}!
         </div>
     )
 }

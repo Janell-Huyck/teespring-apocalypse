@@ -5,11 +5,12 @@ const ShowIncidents = (props) => {
     return (
         <div>
             <h1>This is the Show Incidents Page</h1>
-            <Dumpster/>
+            {/* {console.log(props)} */}
         {props.incidents.map((incident) => {
         return (
           <Dumpster incident={incident}/>
-      )})}
+        )
+      })}
         </div>
     )
 }
