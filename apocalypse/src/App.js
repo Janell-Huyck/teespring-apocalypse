@@ -1,24 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CreateIncident from './pages/create-incident'
+import ShowIncidents from './pages/show-incidents'
 
-function App() {
+const initialPage = "createIncident"
+const App = () => {
+const [whichPage, setWhichPage] = useState(initialPage);
+
+  const togglePage = () => {
+    if (whichPage == 'createIncident') {
+      setWhichPage("showIncidents")
+    }
+    else {
+      setWhichPage("createIncident")
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {whichPage == "createIncident" ? <CreateIncident/> : <ShowIncidents/>}
+      <button onClick = {togglePage}>Switch View</button>
     </div>
   );
 }
