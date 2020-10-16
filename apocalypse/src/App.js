@@ -8,7 +8,7 @@ const App = () => {
   const [whichPage, setWhichPage] = useState(initialPage);
 
   const togglePage = () => {
-    if (whichPage == 'createIncident') {
+    if (whichPage === 'createIncident') {
       setWhichPage("showIncidents")
     }
     else {
@@ -18,8 +18,9 @@ const App = () => {
 
   return (
     <div>
-      {whichPage == "createIncident" ? <CreateIncident/> : <ShowIncidents/>}
+      {whichPage === "createIncident" ? <CreateIncident/> : <ShowIncidents/>}
       <button onClick = {togglePage}>Switch View</button>
+      kilroy was here
     </div>
   );
 }
