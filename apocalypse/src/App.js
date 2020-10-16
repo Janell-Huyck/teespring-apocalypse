@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import CreateIncident from './pages/create-incident'
 import ShowIncidents from './pages/show-incidents'
@@ -9,7 +8,7 @@ const App = () => {
 const [whichPage, setWhichPage] = useState(initialPage);
 
   const togglePage = () => {
-    if (whichPage == 'createIncident') {
+    if (whichPage === 'createIncident') {
       setWhichPage("showIncidents")
     }
     else {
@@ -19,8 +18,9 @@ const [whichPage, setWhichPage] = useState(initialPage);
 
   return (
     <div>
-      {whichPage == "createIncident" ? <CreateIncident/> : <ShowIncidents/>}
+      {whichPage === "createIncident" ? <CreateIncident/> : <ShowIncidents/>}
       <button onClick = {togglePage}>Switch View</button>
+      kilroy was here
     </div>
   );
 }
