@@ -2,11 +2,11 @@ import React from 'react'
 const Textdump = (props) => {
     return (
     
-        <div>
+        <div className = "textDump">
             <input
                 type ="text"
                 defaultValue =""
-                onKeyPress ={(e)=> props.onKeyPress(e,props.tag)}
+                onKeyDown ={(e)=> props.onKeyPress(e,props.tag)}
                 />
         </div>
     )

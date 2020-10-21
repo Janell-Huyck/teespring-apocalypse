@@ -59,19 +59,31 @@ const CreateIncident = (props) => {
         }
     }
     return (
-        <div>
-            <h1>This is the Create Incident Page</h1>
-            <h1>Who caused this fire?</h1>
-            <Textdump onKeyPress={onKeyPress} tag="human"/>
-            <h1>What was on fire?</h1>
-            <Textdump onKeyPress={onKeyPress} tag="program"/>
-            <h1>I'm not sure what to put here.</h1>
-            <Textdump onKeyPress={onKeyPress} tag="event"/>
-            <h1>what day did this occur?</h1>
-            <Textdump onKeyPress={onKeyPress} tag="day"/>
-            <h2>This is what we're getting ready to save.</h2>
-                        <Summary incident={newIncident}/>
-            <button onClick={handleSave}>Save Henry!</button>
+        <div className = "createIncidentPage">
+            <h1>What Fires Happened Recently?</h1>
+            <div className="newFire">
+                <h2>Enter New Fire Data Here</h2>
+                <div className = "culprit">
+                    <h3>Who caused this fire?</h3>
+                    <Textdump onKeyPress={onKeyPress} tag="human"/>
+                </div>
+                <div className = "fireProgram">
+                    <h3>What was on fire?</h3>
+                    <Textdump onKeyPress={onKeyPress} tag="program"/>
+                </div>
+                <div className = "fireEvent" >
+                    <h3>I'm not sure what to put here.</h3>
+                    <Textdump onKeyPress={onKeyPress} tag="event"/>
+                </div>
+                <div className = "fireDay" >
+                    <h3>what day did this occur?</h3>
+                    <Textdump onKeyPress={onKeyPress} tag="day"/>
+                </div>
+            <div className = "summaryFire">
+                <h2>This is what we're getting ready to save.</h2>
+                <Summary incident={newIncident}/>
+            </div>
+            <button className = "button saveFireButton" onClick={handleSave}>Save this Fire!</button>
         </div>
     )
 }

@@ -3,8 +3,9 @@ import Dumpster from '../components/dumpster'
 
 const ShowIncidents = (props) => {
     return (
-        <div>
-            <h1>This is the Show Incidents Page</h1>
+        <div className="showIncidentsPage">
+            <h1>Welcome Back!</h1>
+            <h2>Unfortunately, while you were gone, bad things happened...</h2>
             {/* {console.log(props)} */}
         {props.incidents.map((incident, index) => {
         return (

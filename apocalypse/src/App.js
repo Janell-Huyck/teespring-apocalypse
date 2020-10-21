@@ -30,10 +30,8 @@ const App = () => {
 
   return (
     <div>
+      <button className = "button viewToggleButton" onClick = {togglePage}>Switch View</button>
       {whichPage === "createIncident" ? <CreateIncident saveIncident = {saveIncident}/> : <ShowIncidents incidents = {incidents}/>}
-      <button onClick = {togglePage}>Switch View</button>
-
-      kilroy was here
     </div>
   );
 }
