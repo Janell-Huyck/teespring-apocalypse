@@ -63,26 +63,28 @@ const CreateIncident = (props) => {
             <h1>What Fires Happened Recently?</h1>
             <div className="newFire" >
                 <h2>Enter New Fire Data Here</h2>
-                <div className = "culprit">
-                    <h3>Who caused this fire?</h3>
+                <div className = "newFireTrait">
+                    <h3>Culprit:</h3>
                     <Textdump onKeyPress={onKeyPress} tag="human"/>
                 </div>
-                <div className = "fireProgram">
-                    <h3>What was on fire?</h3>
+                <div className = "newFireTrait">
+                    <h3>Program or System:</h3>
                     <Textdump onKeyPress={onKeyPress} tag="program"/>
                 </div>
-                <div className = "fireEvent" >
-                    <h3>I'm not sure what to put here.</h3>
+                <div className = "newFireTrait" >
+                    <h3>Event Details: </h3>
                     <Textdump onKeyPress={onKeyPress} tag="event"/>
                 </div>
-                <div className = "fireDay" >
-                    <h3>what day did this occur?</h3>
+                <div className = "newFireTrait" >
+                    <h3>Timeframe: </h3>
                     <Textdump onKeyPress={onKeyPress} tag="day"/>
                 </div>
+            </div>   
             <div className = "summaryFire">
-                <h2>This is what we're getting ready to save.</h2>
+                <h2 className = "summaryFireTitle">This is what we're getting ready to save.</h2>
                 <Summary incident={newIncident}/>
             </div>
+            
             <button className = "button saveFireButton" onClick={handleSave}>Save this Fire!</button>
         </div>
     )
