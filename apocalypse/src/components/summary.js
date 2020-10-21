@@ -1,11 +1,11 @@
 import React from 'react'
-const Dumpster = (props) => {
+const Summary = (props) => {
     return (
     
         <div>
              Watch out!  {props.incident.human} caused {props.incident.program} to {props.incident.event}!
         </div>
-            )
+    )
 }
 
-export default Dumpster
+export default Summary
