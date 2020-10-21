@@ -3,7 +3,7 @@ const Dumpster = (props) => {
     return (
     
         <div>
-             Watch out!  {props.incident.human} caused {props.incident.program} to {props.incident.event}!
+             Watch out!  {props.incident.human} caused {props.incident.program} to {props.incident.event} on {props.incident.day}!
         </div>
             )
 }

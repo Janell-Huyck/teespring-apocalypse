@@ -5,7 +5,8 @@ import Textdump from '../components/textdump'
 const initialIncident = {
     human: "henry",
     program: "big-rabbits",
-    event: "appeared",
+    event: "appear",
+    day: "blobbyday"
 }
 
 const initialValue = ""
@@ -23,7 +24,7 @@ const CreateIncident = (props) => {
         }
         else {
             
-            let copyValue = [...newValue]
+            let copyValue = newValue
             copyValue += e.key
             setNewValue(copyValue) 
             console.log (newValue)
@@ -36,18 +37,26 @@ const CreateIncident = (props) => {
             let copyValue = {...newIncident}
             copyValue["human"]=newValue
             setNewIncident(copyValue)
+            setNewValue("")
         }
         else if (tag==="program") { 
             let copyValue = {...newIncident}
             copyValue["program"]=newValue
             setNewIncident(copyValue)
+            setNewValue("")
         }
-        else {
+        else if (tag==="event") {
             let copyValue = {...newIncident}
             copyValue["event"]=newValue
             setNewIncident(copyValue)
+            setNewValue("")
         }
-
+        else {
+            let copyValue = {...newIncident}
+            copyValue["day"]=newValue
+            setNewIncident(copyValue)
+            setNewValue("")
+        }
     }
     return (
         <div>
@@ -58,6 +67,8 @@ const CreateIncident = (props) => {
             <Textdump onKeyPress={onKeyPress} tag="program"/>
             <h1>I'm not sure what to put here.</h1>
             <Textdump onKeyPress={onKeyPress} tag="event"/>
+            <h1>what day did this occur?</h1>
+            <Textdump onKeyPress={onKeyPress} tag="day"/>
             <h2>This is what we're getting ready to save.</h2>
                         <Summary incident={newIncident}/>
             <button onClick={handleSave}>Save Henry!</button>
