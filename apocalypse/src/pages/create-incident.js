@@ -61,7 +61,7 @@ const CreateIncident = (props) => {
     return (
         <div className = "createIncidentPage">
             <h1>What Fires Happened Recently?</h1>
-            <div className="newFire">
+            <div className="newFire" >
                 <h2>Enter New Fire Data Here</h2>
                 <div className = "culprit">
                     <h3>Who caused this fire?</h3>
