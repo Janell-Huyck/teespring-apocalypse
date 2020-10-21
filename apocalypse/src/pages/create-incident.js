@@ -22,8 +22,9 @@ const CreateIncident = (props) => {
             onSaveValue (tag)
         }
         else {
-            
-            let copyValue = [...newValue]
+            console.log("the key is", e.key)
+            let copyValue = newValue
+            console.log("copyvalue is", copyValue)
             copyValue += e.key
             setNewValue(copyValue) 
             console.log (newValue)
