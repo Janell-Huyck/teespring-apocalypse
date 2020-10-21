@@ -2,7 +2,7 @@ import React from 'react'
 const Textdump = (props) => {
     return (
     
-        <div>
+        <div className = "textDump">
             <input
                 type ="text"
                 defaultValue =""
